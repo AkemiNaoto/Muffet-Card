@@ -1,0 +1,70 @@
+        /* variáveis css são declradas no elemento :root{} */
+        /* Nome de variável css deve iniciar com dois hífens */
+        /* Usar letras minúsculas e sem acentuar */
+        /* Nomes compostos deve estar separados por hífen */
+        :root 
+        {
+
+            --color-red: rgb(106, 32, 32);
+            --color-white: rgb(255, 255, 255);
+            --color-lilas:  rgb(177, 183, 240);
+            --color-darkpurple:  rgb(68, 53, 77); 
+            --color-black:  rgb(0, 0, 0);
+            --radius-sm: 8px; 
+            --radius-full: 100%; 
+
+        }
+
+        /* Definindo a cor de fundo para a página */
+
+        body 
+        {
+
+            background-color: var(--color-black);
+
+        }
+
+        /* Definindo padrões que seram usados na div */
+        /* Conceitos de herança: filhos herdam algumas propriedades do pai */
+        /* Se o filho tiver uma propriedade com o valor definido, prevalece a formatação do filho */
+
+        .container
+        {
+
+            background-color: var(--color-darkpurple);
+            color: var(--color-white);
+            width: 750px;
+            text-align: center;
+            border-radius: var(--radius-sm);
+
+
+        }
+
+        .container img
+        {
+
+            border-radius: var(--radius-full);
+            border: 5px dashed var(--color-black);
+            scale: 0.8;   
+            transition: .5s;
+
+        }
+
+        .container:hover img 
+        {
+
+            border: 5px solid var(--color-red);
+            scale: 0.9;
+
+
+        }
+
+        /* eifeito cascata: a formatação que estiver mais abaixo é a que prevalece */
+
+        .container h2
+        {
+
+            color: var(--color-red);
+
+        }
+
